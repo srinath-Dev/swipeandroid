@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:elevation="8dp"
+    app:strokeColor="#f5f5f5"
+    app:strokeWidth="2dp"
+    android:background="@color/white"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="20dp">
+
+   <LinearLayout
+       android:background="@color/white"
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+
+       android:layout_height="match_parent">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="100dp">
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/imageview"
+               android:layout_width="150dp"
+               android:layout_marginTop="20dp"
+               android:layout_centerHorizontal="true"
+               android:foregroundGravity="center"
+               android:layout_gravity="center"
+               android:scaleType="fitCenter"
+               android:layout_height="100dp"
+               android:adjustViewBounds="true"
+               android:elevation="5dp"
+               tools:background="@tools:sample/backgrounds/scenic"/>
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/swipeimageview"
+               android:layout_width="100dp"
+               android:layout_marginTop="20dp"
+               android:layout_centerHorizontal="true"
+               android:foregroundGravity="center"
+               android:layout_gravity="center"
+               android:scaleType="fitCenter"
+               android:layout_centerVertical="true"
+               android:layout_height="20dp"
+               android:visibility="gone"
+               android:adjustViewBounds="true"
+               android:elevation="5dp"
+               android:src="@drawable/swipe"
+               tools:background="@tools:sample/backgrounds/scenic"/>
+
+       </RelativeLayout>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <TextView
+               android:id="@+id/name"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               tools:text="@tools:sample/full_names"
+               android:background="#D3FFFFFF"
+               android:padding="10dp"
+               android:lines="1"
+               android:textSize="16dp"
+               android:textColor="@color/black"
+               android:maxLines="1"
+               android:layout_gravity="bottom"
+               android:textStyle="bold"
+               android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+           <TextView
+               android:id="@+id/category"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:background="#D3FFFFFF"
+               android:paddingHorizontal="10dp"
+               android:layout_below="@+id/name"
+               android:lines="1"
+               android:textSize="12dp"
+               android:textColor="@color/black"
+               android:maxLines="1"
+               android:layout_gravity="bottom"
+               android:textStyle="normal"
+               android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+           <TextView
+               android:id="@+id/tax"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:background="#D3FFFFFF"
+               android:paddingHorizontal="10dp"
+               android:layout_below="@+id/category"
+               android:lines="1"
+               android:layout_marginTop="10dp"
+               android:textSize="12dp"
+               android:textColor="@color/black"
+               android:maxLines="1"
+               android:layout_gravity="bottom"
+               android:textStyle="normal"
+               android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+           <TextView
+               android:id="@+id/price"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:background="#D3FFFFFF"
+               android:paddingHorizontal="10dp"
+               android:layout_below="@+id/tax"
+               android:lines="1"
+               android:layout_marginTop="10dp"
+               android:textSize="14dp"
+               android:textColor="@color/black"
+               android:maxLines="1"
+               android:layout_gravity="bottom"
+               android:textStyle="bold"
+               android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+       </RelativeLayout>
+
+
+
+
+   </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

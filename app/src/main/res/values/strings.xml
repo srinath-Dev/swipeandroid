@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">swipe android</string>
+
+    <string name="selected_item">Selected item:</string>
+
+    <string-array name="Type">
+        <item>Laptop</item>
+        <item>Mobile</item>
+        <item>Fruit</item>
+        <item>Clothes</item>
+        <item>Vegetable</item>
+    </string-array>
+</resources>

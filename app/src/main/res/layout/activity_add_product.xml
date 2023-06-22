@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".app.activites.AddProductActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:src="@drawable/baseline_arrow_back_ios_24"
+                    android:layout_height="25dp"
+                    app:tint="@color/black" />
+
+                <TextView
+                    style="@style/Text14Bold"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Add Product"
+                    android:textSize="22dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/app_formlabel_textview" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Text14Bold"
+                android:layout_gravity="start"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="Product Name"
+                android:textStyle="bold"
+                android:textColor="@color/app_formlabel_textview" />
+
+            <EditText
+                android:id="@+id/edtProductName"
+                style="@style/Edittext"
+                android:imeOptions="actionNext"
+                android:maxLength="25" />
+
+            <TextView
+                style="@style/Text14Bold"
+                android:layout_gravity="start"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="Product Type"
+                android:textStyle="bold"
+                android:textColor="@color/app_formlabel_textview" />
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <Spinner
+                   android:id="@+id/spinner"
+                   android:dropDownSelector="@color/black"
+                   android:textColor="@color/app_formlabel_textview"
+                   style="@style/Edittext" />
+
+               <ImageView
+                   android:layout_width="25dp"
+                   android:src="@drawable/baseline_arrow_drop_down_24"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_height="25dp"/>
+           </RelativeLayout>
+
+            <TextView
+                style="@style/Text14Bold"
+                android:layout_gravity="start"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="Tax"
+                android:textStyle="bold"
+                android:textColor="@color/app_formlabel_textview" />
+
+            <EditText
+                android:id="@+id/edtProductTax"
+                style="@style/Edittext"
+                android:digits="0123456789"
+                android:inputType="phone"
+                android:imeOptions="actionNext"
+                android:maxLength="25" />
+
+            <TextView
+                style="@style/Text14Bold"
+                android:layout_gravity="start"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="Price"
+                android:textStyle="bold"
+                android:textColor="@color/app_formlabel_textview" />
+
+            <EditText
+                android:id="@+id/edtPrice"
+                style="@style/Edittext"
+                android:digits="0123456789"
+                android:inputType="phone"
+                android:imeOptions="actionDone"
+                android:layout_marginBottom="20dp"
+                android:maxLength="25" />
+
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_margin="8dp"
+                android:elevation="8dp"
+                app:strokeColor="#f5f5f5"
+                android:layout_marginTop="20dp"
+                app:strokeWidth="2dp"
+                android:background="@color/white"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="20dp">
+
+
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:id="@+id/imagePlaceHolder"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/baseline_image_24"
+                        android:layout_height="50dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/selectedView"
+                        android:visibility="gone"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:id="@+id/imageview"
+                            android:scaleType="centerCrop"
+                            android:layout_height="match_parent"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#26000000"/>
+
+                        <ImageView
+                            android:id="@+id/remove"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/baseline_cancel_24"
+                            app:tint="@color/white" />
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/addBtn"
+                style="@style/activeButton"
+                android:layout_margin="20dp"
+                android:clickable="false"
+                android:text="Add" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressDialog"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="#8b8b8b" />
+
+
+
+</RelativeLayout>
